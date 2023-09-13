@@ -1,0 +1,448 @@
+* {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+
+/* Định nghĩa keyframes animation tên "shake" */
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(5deg);
+    }
+    40% {
+        transform: rotate(-5eg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container-personal-page {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+    padding: 5vh 0 0 0;
+}
+
+.container-personal-page .menu-bar {
+    width: 270px;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-personal-page .menu-bar .item-menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    justify-content: start;
+    align-items: center;
+    color: #666666;
+}
+
+.container-personal-page .menu-bar .active {
+    background-color: #d2d6d3;
+    border-left: 5px solid #1250DC;
+    box-sizing: border-box;
+}
+
+.container-personal-page .menu-bar a {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-decoration: none;
+    height: 50px;
+    justify-content: start;
+    align-items: center;
+}
+
+.container-personal-page .menu-bar .item-menu img {
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+}
+
+.container-personal-page .menu-bar .item-menu p {
+    margin-left: 5px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-personal-page .frame_infor {
+    margin-bottom: 35px;
+    width: 70vw;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.container-personal-page .frame_infor .header {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #C4C4C4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.container-personal-page .frame_infor .header .title {
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+.container-personal-page .frame_infor .header .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-personal-page .frame_infor .header .left .point {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #4D4D4D;
+    margin: 0 5px;
+}
+
+.container-personal-page .frame_infor .header .left .detail {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4D4D4D;
+}
+
+.container-personal-page .frame_infor .header a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1250DC;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+.container-personal-page .frame_infor .infor_order {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_customer {
+    width: 50%;
+    display: flex;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-bottom: 10px;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_customer .header-text {
+    width: 100%;
+    border-bottom: 1px solid #C4C4C4;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_customer .header-text p {
+    padding: 10px 20px;
+    color: #999999;
+    font-size: 13px;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_customer .title {
+    padding: 10px 20px;
+    color: #999999;
+    font-size: 12px;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_customer .content {
+    padding: 0 20px;
+    color: #1A1A1A;
+    font-size: 12px;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_detail_order {
+    width: 30%;
+    display: flex;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_detail_order .header-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_detail_order .header-row .vertical {
+    height: 5vh;
+    width: 1px;
+    border-radius: 50%;
+    align-self: center;
+    background-color: #E6E6E6;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_detail_order .header-row .text-grey {
+    padding: 5px 0;
+    color: #999999;
+    font-size: 12px;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_detail_order .header-row .text-black {
+    padding: 5px 0;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_detail_order .header-row-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_detail_order .header-row-2 .text-1 {
+    padding: 20px 0 20px 5px;
+    color: #1A1A1A;
+    font-size: 16px;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_detail_order .header-row-2 .text-2 {
+    padding: 20px 5px 20px 0;
+    color: #2C742F;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.container-personal-page .frame_infor .infor_order .infor_detail_order {
+    width: 30%;
+    display: flex;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.container-personal-page .frame_infor .progess-status {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.container-personal-page .frame_infor .progess-status .circle {
+    width: 40px;
+    height: 40px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%231250DCFF' stroke-width='3' stroke-dasharray='7' stroke-dashoffset='54' stroke-linecap='butt'/%3e%3c/svg%3e");
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1250DC;
+    position: relative;
+}
+
+.container-personal-page .frame_infor .progess-status .bar {
+    margin: 0 3px;
+    width: 15vw;
+    height: 10px;
+    background-color: #e6e6e683;
+}
+
+.container-personal-page .frame_infor .progess-status .bar.active {
+    width: 15vw;
+    height: 10px;
+    background-color: #1250DC;
+}
+
+.container-personal-page .frame_infor .progess-status .circle.active {
+    background-image: none !important;
+    background-color: #1250DC;
+    color: #ffffff !important;
+}
+
+.container-personal-page .frame_infor .progess-status .circle p {
+    position: absolute;
+    color: #1a1a1a;
+    width: 200px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    top: 45px;
+}
+
+.container-personal-page .frame_infor .progess-status .circle p.active {
+    color: #2C742F;
+}
+
+.container-personal-page .frame_infor .header-row-product {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #F2F2F2;
+    padding: 5px 0;
+}
+
+.container-personal-page .frame_infor .header-row-product .name {
+    padding-left: 5px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    font-size: 12px;
+    color: #4D4D4D;
+    font-weight: 500;
+}
+
+.container-personal-page .frame_infor .header-row-product .price {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #4D4D4D;
+    font-weight: 500;
+}
+
+.container-personal-page .frame_infor .header-row-product .quatity {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #4D4D4D;
+    font-weight: 500;
+}
+
+.container-personal-page .frame_infor .header-row-product .total-price {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #4D4D4D;
+    font-weight: 500;
+}
+
+.container-personal-page .frame_infor .row-product {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.container-personal-page .frame_infor .row-product .name {
+    padding-left: 5px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    font-size: 12px;
+    color: #1A1A1A;
+    font-weight: 500;
+}
+
+.container-personal-page .frame_infor .row-product .name img {
+    width: 75px;
+    height: 75px;
+    margin-right: 5px;
+}
+
+.container-personal-page .frame_infor .row-product .price {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #1A1A1A;
+    font-weight: 500;
+}
+
+.container-personal-page .frame_infor .row-product .quatity {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #1A1A1A;
+    font-weight: 500;
+}
+
+.container-personal-page .frame_infor .row-product .total-price {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #1A1A1A;
+    font-weight: 600;
+}

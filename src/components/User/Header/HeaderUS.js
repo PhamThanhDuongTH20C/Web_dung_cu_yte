@@ -5,7 +5,52 @@ import phoneCallImage from './img/phone-call.png'; // Importing the 'phone-call.
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faShoppingCart } from '@fortawesome/free-solid-svg-icons'; // Import the specific Font Awesome icons you want to use
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'; 
+import { useNavigate } from 'react-router-dom';
 const HeaderUS = () => {
+
+  const accessTokenCookie = document.cookie.replace(/(?:(?:^|.*;\s*)accessToken\s*=\s*([^;]*).*$)|^.*$/, "$1");
+  let name = ""; 
+  if (accessTokenCookie) {
+    const payload = JSON.parse(atob(accessTokenCookie.split('.')[1]));
+    if (payload && payload.user && payload.user.username) {
+      const username = payload.user.username;
+      name = decodeURIComponent(escape(username));
+      console.log("Corrected Text:", name);
+    } else {
+      console.log("Invalid or incomplete payload in accessToken.");
+    }
+  } else {
+    console.log("accessToken cookie is null or empty.");
+  }
+
+
+  const handleLogout = () => {
+    document.cookie = 'accessToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+  };
+const Getname=()=>{
+  if(accessTokenCookie===null || accessTokenCookie ==="")
+     {
+      return(
+        <div className="sign-in-up">
+        <a href="/Login" className="sign-in">Đăng Nhập</a>
+        <p>/</p>
+        <a href="/Register" className="sign-up">Đăng ký</a>
+      </div>
+      )
+     }
+     else{
+      return(
+        <div className="sign-in-up">
+        <a href="" className="sign-in">{name}</a>
+        <p>/</p>
+        <a href="" className="sign-up" onClick={handleLogout}>Đăng Xuất</a>
+
+      </div>
+      )
+     }
+}
+
+
   return (
     <header>
          <div className="header-infor">
@@ -16,14 +61,8 @@ const HeaderUS = () => {
             198 Đ. Tô Hiến Thành Phường 15 Quận 10 Thành phố Hồ Chí Minh
           </p>
         </div>
-
-            <div className="sign-in-up">
-          <a href="" className="sign-in">Đăng nhập</a>
-          <p>/</p>
-          <a href="" className="sign-up">Đăng ký</a>
-        </div>
+         <>{Getname()}</>
       </div>
-
       {/* Main Header Section */}
       <div className="header-main">
         <div className="taskbar">
@@ -92,6 +131,7 @@ const HeaderUS = () => {
           </div>
         </div>
       </div>
+      
     </header>
   );
 }

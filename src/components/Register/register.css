@@ -54,13 +54,42 @@ body {
     justify-content: space-evenly;
     align-items: center;
 }
+.error-message {
+    font-size: 12px; /* Set the font size as desired */
+    color: red; /* Set the color to red */
+  }
+  
+.frame-login .login #phoneNumber {
+    width: 80%;
+    height: 35px;
+    border: 2px solid #E6E6E6;
+    border-radius: 5px;
+    padding: 0 10px;
+    transition: border .50s ease-in-out;
+}
 
+.frame-login .login #phoneNumber:focus {
+    outline: none;
+    border: 2px solid #124fdc7c;
+}
 .frame-login .login .text {
     font-size: 30px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
+.frame-login .login #fullName {
+    width: 80%;
+    height: 35px;
+    border: 2px solid #E6E6E6;
+    border-radius: 5px;
+    padding: 0 10px;
+    transition: border .50s ease-in-out;
+}
 
+.frame-login .login #fullName:focus {
+    outline: none;
+    border: 2px solid #124fdc7c;
+}
 .frame-login .login #email {
     width: 80%;
     height: 35px;
